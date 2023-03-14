@@ -16,7 +16,7 @@ struct RootView: View {
         }
     @StateObject var appState = AppState()
     @State var restoreText = ("Restore DemoLoop")
-    @State var showUnrestoreSuccess = false
+    @State var showUnrestoreProcess = false
     @State var presentResetMenu = false
     var body: some View {
         NavigationView {
@@ -46,16 +46,17 @@ struct RootView: View {
                 Section {
                     NavigationLink(destination: Group {
                         if appState.demoloopon {
-                            ThemeSelectorUI()
+                            ThemeSelectorUI(appState: $appState)
                         } else {
-                            DemoUpdateInstallerStep1()
+                            DemoUpdateSetup(appState: $appState)
                         }
                     }) {
-                        Text("\(restoreText)")
-                    } .onAppear(perform: ChangeRestoreText)
+                        Text("Navigate")
+                    }
+                    .buttonStyle(TintedButton(color: .blue, fullwidth: true))
                     Button("Unrestore DemoLoop") {
-                        SurgeryRemove()
-                    }.disabled(appState.demoloopon == false)
+                        showUnrestoreProcess = true
+                    } .disabled(appState.demoloopon == false) .buttonStyle(TintedButton(color: .red, fullwidth: true))
                 } footer: {
                     Text("You will have to have approved the sandbox escape if this is the first time you're running StoreControl.\nYou should only unrestore DemoLoop if you're experiencing errors and/or issues. Selecting a new theme usually just overrides the previous.")
                 } .onAppear(perform: PrettyPlease)
@@ -81,8 +82,8 @@ struct RootView: View {
                     Text("LocalConsole by duraidabdul\nMDC and TCCD exploits by Ian Beer & zhuowei - Initial patch method by iBaDev")
                 }
             }
-        } .navigationViewStyle(StackNavigationViewStyle()) .sheet(isPresented: $showUnrestoreSuccess) {
-            surgeryRemoveSuccess()
+        } .navigationViewStyle(StackNavigationViewStyle()) .fullScreenCover(isPresented: $showUnrestoreProcess) {
+            surgeryRemoveProcess()
 }
     }
     
@@ -107,7 +108,6 @@ struct RootView: View {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 appState.demoloopon = false
                 appState.ButtonText = "Restore DemoLoop"
-                showUnrestoreSuccess = true
             }
         } else {
             consoleManager.print("Could not find folder")
@@ -200,24 +200,25 @@ struct RootView_Previews: PreviewProvider {
     }
 }
 
-struct surgeryRemoveSuccess: View {
+struct surgeryRemoveProcess: View {
     @Environment(\.presentationMode) var presentationMode
+    @StateObject var appState = AppState()
     var body: some View {
         VStack {
-                    Image(systemName: "trash.square.fill")
+            Image(systemName: "\(appState.operationStatusSymbol)")
                         .imageScale(.medium)
                         .font(.system(size: 150, weight: .regular, design: .default))
                     Spacer()
                         .frame(height: 41)
                         .clipped()
-                    Text("Unrestore Successful!")
+                    Text("Unrestoring DemoLoop")
                         .font(.largeTitle.weight(.bold))
                         .multilineTextAlignment(.center)
                         .frame(width: 350)
                     Spacer()
                         .frame(height: 20)
                         .clipped()
-                    Text("DemoLoop has been successfully unpatched.")
+                    Text("Are you sure you would like to Unrestore DemoLoop?\n\nYou should only perform this function if DemoLoop has been showing unexpected behavior with the theme you have selected.")
                         .font(.subheadline.weight(.regular))
                         .frame(width: 320)
                         .clipped()
@@ -225,14 +226,18 @@ struct surgeryRemoveSuccess: View {
                     Spacer()
                         .frame(height: 20)
                         .clipped()
-            Button("Dismiss and Restart") {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-                    exit(0)
+            Button("I'm Sure, Continue") {
+                
+                exit(0)
                 }
-                    }
+            } .buttonStyle(ButtonFromInteractfulROFL()) .frame(width: 350)
+            Spacer()
+                    .frame(maxHeight: 17)
+            Button("No Thanks, Return") {
+                self.presentationMode.wrappedValue.dismiss()
+            }
                 }
         }
-    }
 
 struct ResetConfirm: View {
     @Environment(\.presentationMode) var presentationMode
@@ -272,6 +277,8 @@ struct ResetConfirm: View {
                     exit(0)
                 }
             } .buttonStyle(ButtonFromInteractfulROFL()) .frame(width: 350)
+            Spacer()
+                    .frame(maxHeight: 17)
             Button("No Thanks, Return") {
                 self.presentationMode.wrappedValue.dismiss()
             }

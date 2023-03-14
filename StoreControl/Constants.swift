@@ -14,4 +14,5 @@ class AppState: ObservableObject {
     @AppStorage("custom app id") var customappid: Bool = false
     @AppStorage("app id string") var appidstring: String = ("")
     @AppStorage("lario trolled") var lariotheme: Bool = false
+    var operationStatusSymbol = ("ellipsis")
 }

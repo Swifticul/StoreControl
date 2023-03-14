@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F01C987929B35CA8001D6E06 /* DemoUpdateInstallerStep1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01C987829B35CA8001D6E06 /* DemoUpdateInstallerStep1.swift */; };
+		F01C987929B35CA8001D6E06 /* DemoUpdateSetup in Sources */ = {isa = PBXBuildFile; fileRef = F01C987829B35CA8001D6E06 /* DemoUpdateSetup */; };
 		F01C988429B37049001D6E06 /* Profiles in Resources */ = {isa = PBXBuildFile; fileRef = F01C988329B37049001D6E06 /* Profiles */; };
 		F04D5B8D29B387D100CAF926 /* ThemeSelectorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04D5B8C29B387D100CAF926 /* ThemeSelectorUI.swift */; };
 		F04D5B8F29B3883C00CAF926 /* Themes in Resources */ = {isa = PBXBuildFile; fileRef = F04D5B8E29B3883C00CAF926 /* Themes */; };
@@ -15,9 +15,9 @@
 		F05FDD4E29AB5B2600FDD6DA /* vm_unaligned_copy_switch_race.c in Sources */ = {isa = PBXBuildFile; fileRef = F05FDD4929AB5B2600FDD6DA /* vm_unaligned_copy_switch_race.c */; };
 		F05FDD4F29AB5B2600FDD6DA /* grant_full_disk_access.m in Sources */ = {isa = PBXBuildFile; fileRef = F05FDD4C29AB5B2600FDD6DA /* grant_full_disk_access.m */; };
 		F05FDD5129AB5B5B00FDD6DA /* ipabuild.sh in Resources */ = {isa = PBXBuildFile; fileRef = F05FDD5029AB5B5B00FDD6DA /* ipabuild.sh */; };
-		F05FDD5629AB6BDC00FDD6DA /* DemoUpdateInstallerStep2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05FDD5529AB6BDC00FDD6DA /* DemoUpdateInstallerStep2.swift */; };
 		F05FDD5A29AB961E00FDD6DA /* DemoLoopSurgeryAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05FDD5929AB961E00FDD6DA /* DemoLoopSurgeryAdd.swift */; };
 		F05FDD5C29ABC13300FDD6DA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05FDD5B29ABC13300FDD6DA /* Constants.swift */; };
+		F087303929C0DE5F000A6B11 /* TintedButtonDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = F087303829C0DE5F000A6B11 /* TintedButtonDependencies.swift */; };
 		F09E3E3429B4B83C003AB870 /* ExperimentsInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09E3E3329B4B83C003AB870 /* ExperimentsInterface.swift */; };
 		F0BC034529AA00AC004D3DE8 /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC034429AA00AC004D3DE8 /* Root.swift */; };
 		F0BC034729AA00AC004D3DE8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BC034629AA00AC004D3DE8 /* RootView.swift */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F01C987829B35CA8001D6E06 /* DemoUpdateInstallerStep1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUpdateInstallerStep1.swift; sourceTree = "<group>"; };
+		F01C987829B35CA8001D6E06 /* DemoUpdateSetup */ = {isa = PBXFileReference; lastKnownFileType = text; path = DemoUpdateSetup; sourceTree = "<group>"; };
 		F01C988329B37049001D6E06 /* Profiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Profiles; sourceTree = "<group>"; };
 		F01C988629B37C74001D6E06 /* provisioning.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = provisioning.md; sourceTree = "<group>"; };
 		F04D5B8C29B387D100CAF926 /* ThemeSelectorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectorUI.swift; sourceTree = "<group>"; };
@@ -39,9 +39,9 @@
 		F05FDD4B29AB5B2600FDD6DA /* vm_unaligned_copy_switch_race.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vm_unaligned_copy_switch_race.h; sourceTree = "<group>"; };
 		F05FDD4C29AB5B2600FDD6DA /* grant_full_disk_access.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = grant_full_disk_access.m; sourceTree = "<group>"; };
 		F05FDD5029AB5B5B00FDD6DA /* ipabuild.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ipabuild.sh; sourceTree = "<group>"; };
-		F05FDD5529AB6BDC00FDD6DA /* DemoUpdateInstallerStep2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUpdateInstallerStep2.swift; sourceTree = "<group>"; };
 		F05FDD5929AB961E00FDD6DA /* DemoLoopSurgeryAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoLoopSurgeryAdd.swift; sourceTree = "<group>"; };
 		F05FDD5B29ABC13300FDD6DA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F087303829C0DE5F000A6B11 /* TintedButtonDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TintedButtonDependencies.swift; sourceTree = "<group>"; };
 		F09E3E3329B4B83C003AB870 /* ExperimentsInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentsInterface.swift; sourceTree = "<group>"; };
 		F0BC034129AA00AC004D3DE8 /* StoreControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoreControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BC034429AA00AC004D3DE8 /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
@@ -86,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				F04D5B8E29B3883C00CAF926 /* Themes */,
+				F087303829C0DE5F000A6B11 /* TintedButtonDependencies.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -150,8 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				F0BC034629AA00AC004D3DE8 /* RootView.swift */,
-				F01C987829B35CA8001D6E06 /* DemoUpdateInstallerStep1.swift */,
-				F05FDD5529AB6BDC00FDD6DA /* DemoUpdateInstallerStep2.swift */,
+				F01C987829B35CA8001D6E06 /* DemoUpdateSetup */,
 				F04D5B8C29B387D100CAF926 /* ThemeSelectorUI.swift */,
 				F05FDD5929AB961E00FDD6DA /* DemoLoopSurgeryAdd.swift */,
 				F09E3E3329B4B83C003AB870 /* ExperimentsInterface.swift */,
@@ -239,16 +239,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F087303929C0DE5F000A6B11 /* TintedButtonDependencies.swift in Sources */,
 				F05FDD5A29AB961E00FDD6DA /* DemoLoopSurgeryAdd.swift in Sources */,
 				F0BC034729AA00AC004D3DE8 /* RootView.swift in Sources */,
 				F09E3E3429B4B83C003AB870 /* ExperimentsInterface.swift in Sources */,
 				F05FDD4D29AB5B2600FDD6DA /* helpers.m in Sources */,
 				F05FDD4F29AB5B2600FDD6DA /* grant_full_disk_access.m in Sources */,
 				F05FDD4E29AB5B2600FDD6DA /* vm_unaligned_copy_switch_race.c in Sources */,
-				F05FDD5629AB6BDC00FDD6DA /* DemoUpdateInstallerStep2.swift in Sources */,
 				F04D5B8D29B387D100CAF926 /* ThemeSelectorUI.swift in Sources */,
 				F0BC034529AA00AC004D3DE8 /* Root.swift in Sources */,
-				F01C987929B35CA8001D6E06 /* DemoUpdateInstallerStep1.swift in Sources */,
+				F01C987929B35CA8001D6E06 /* DemoUpdateSetup in Sources */,
 				F05FDD5C29ABC13300FDD6DA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

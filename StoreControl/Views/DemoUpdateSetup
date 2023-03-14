@@ -1,5 +1,5 @@
 //
-//  DemoUpdateInstallerStep1.swift
+//  DemoUpdateSetup.swift
 //  StoreControl
 //
 //  Created by Tristan on 04/03/2023.
@@ -11,7 +11,7 @@ import WebKit
 
 let deviceName = UIDevice.current.name
 
-struct DemoUpdateInstallerStep1: View {
+struct DemoUpdateSetup: View {
     @State private var isPresented = false
     @State var showSuccess = false
     var body: some View {
@@ -59,9 +59,9 @@ struct DemoUpdateInstallerStep1: View {
         }
     }
     
-    struct DemoUpdateInstallerStep1_Previews: PreviewProvider {
+    struct DemoUpdateSetup_Previews: PreviewProvider {
         static var previews: some View {
-            DemoUpdateInstallerStep1()
+            DemoUpdateSetup()
         }
     }
 }
