@@ -12,7 +12,7 @@ struct RootView: View {
     let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     var buildNumber: String {
             guard let buildNumber = Bundle.main.infoDictionary?["CFBundleVersion"] as? String else { return "" }
-            return "   \(buildNumber)   "
+            return "    \(buildNumber)    "
         }
     @StateObject var appState = AppState()
     @State var restoreText = ("Restore DemoLoop")
@@ -21,45 +21,42 @@ struct RootView: View {
     var body: some View {
         NavigationView {
             List {
-                Section {
-                    Image("IconInApp")
-                        .renderingMode(.original)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 130)
+                Image("IconInApp")
+                    .renderingMode(.original)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 130)
+                    .clipped()
+                Text("StoreControl")
+                    .font(.largeTitle.weight(.bold))
+                HStack {
+                    Text("Version \(appVersion ?? "AppVersion")")
+                    Capsule(style: .continuous)
+                        .frame(width: getWidth(text: buildNumber), height: 30)
                         .clipped()
-                    Text("StoreControl")
-                        .font(.largeTitle.weight(.bold))
-                    HStack {
-                        Text("Version \(appVersion ?? "AppVersion")")
-                        Capsule(style: .continuous)
-                            .frame(width: getWidth(text: buildNumber), height: 30)
-                            .clipped()
-                            .foregroundColor(.blue)
-                            .overlay(
-                                Text("\(buildNumber)")
-                                    .font(.footnote.weight(.semibold))
-                                    .foregroundColor(.white)
-                            )
-                    }
+                        .foregroundColor(.blue)
+                        .overlay(
+                            Text("\(buildNumber)")
+                                .font(.footnote.weight(.semibold))
+                                .foregroundColor(.white)
+                        )
                 }
-                Section {
-                    NavigationLink(destination: Group {
-                        if appState.demoloopon {
-                            ThemeSelectorUI(appState: $appState)
-                        } else {
-                            DemoUpdateSetup(appState: $appState)
-                        }
-                    }) {
-                        Text("Navigate")
-                    }
-                    .buttonStyle(TintedButton(color: .blue, fullwidth: true))
-                    Button("Unrestore DemoLoop") {
-                        showUnrestoreProcess = true
-                    } .disabled(appState.demoloopon == false) .buttonStyle(TintedButton(color: .red, fullwidth: true))
-                } footer: {
-                    Text("You will have to have approved the sandbox escape if this is the first time you're running StoreControl.\nYou should only unrestore DemoLoop if you're experiencing errors and/or issues. Selecting a new theme usually just overrides the previous.")
-                } .onAppear(perform: PrettyPlease)
+                NavigationLink(destination:
+                    appState.demoloopon ? AnyView(ThemeSelectorUI().environmentObject(appState)) : AnyView(DemoUpdateSetup().environmentObject(appState))
+                ) {
+                    Text("\(appState.ButtonText)")
+                        .font(Font.body.weight(.medium))
+                        .padding(.vertical, 12)
+                        .foregroundColor(Color.white)
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            RoundedRectangle(cornerRadius: 14.0, style: .continuous)
+                                .fill(Color.accentColor)
+                        )
+                }
+                Button("Unrestore DemoLoop") {
+                    showUnrestoreProcess = true
+                } .disabled(appState.demoloopon == false) .buttonStyle(ButtonFromInteractfulROFL())
                 Section {
                     Button("Toggle Console View") {
                         if consoleManager.isVisible == false {
