@@ -51,8 +51,10 @@ struct RootView: View {
                         .frame(maxWidth: .infinity)
                         .background(
                             RoundedRectangle(cornerRadius: 14.0, style: .continuous)
-                                .fill(Color.accentColor)
+                                .fill(Color.blue)
                         )
+                        .opacity(1.0)
+                    
                 }
                 Button("Unrestore DemoLoop") {
                     showUnrestoreProcess = true
@@ -159,15 +161,6 @@ struct RootView: View {
     }
 }
 
-func PrettyPlease() {
-    grant_full_disk_access() { error in
-            if (error != nil) {
-                consoleManager.print("Failed to escape sandbox")
-            }
-        }
-    
-}
-
 func getWidth(text: String) -> CGFloat {
     let font = UIFont.boldSystemFont(ofSize: UIFont.preferredFont(forTextStyle: .footnote).pointSize)
     let attributes = [NSAttributedString.Key.font: font]
@@ -186,7 +179,7 @@ public struct ButtonFromInteractfulROFL: ButtonStyle {
                 RoundedRectangle(cornerRadius: 14.0, style: .continuous)
                     .fill(Color.accentColor)
             )
-            .opacity(configuration.isPressed ? 0.4 : 1.0)
+            .opacity(configuration.isPressed ? 0.1 : 1.0)
     }
 }
 

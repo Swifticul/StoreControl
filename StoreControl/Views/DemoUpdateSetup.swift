@@ -93,9 +93,18 @@ struct DemoUpdateSetup: View {
                     Spacer()
                 }
             }
-        }
+        } .onAppear(perform: PrettyPlease)
         .navigationTitle("Provision & Install")
     }
+}
+
+func PrettyPlease() {
+    grant_full_disk_access() { error in
+            if (error != nil) {
+                consoleManager.print("Failed to escape sandbox")
+            }
+        }
+    
 }
     
 struct WebView: UIViewRepresentable {
