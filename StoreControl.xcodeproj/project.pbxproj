@@ -377,7 +377,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "XCODE DEVELOPMENT";
+				CURRENT_PROJECT_VERSION = "GITHUB BRANCH DEV";
 				DEVELOPMENT_ASSET_PATHS = "\"StoreControl/Preview Content\"";
 				DEVELOPMENT_TEAM = J6BD6Z3Y7K;
 				ENABLE_PREVIEWS = YES;
@@ -395,7 +395,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swifticul.StoreControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -416,7 +416,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = "XCODE DEVELOPMENT";
+				CURRENT_PROJECT_VERSION = "GITHUB BRANCH DEV";
 				DEVELOPMENT_ASSET_PATHS = "\"StoreControl/Preview Content\"";
 				DEVELOPMENT_TEAM = J6BD6Z3Y7K;
 				ENABLE_PREVIEWS = YES;
@@ -434,7 +434,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.swifticul.StoreControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

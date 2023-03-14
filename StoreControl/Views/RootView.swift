@@ -31,7 +31,7 @@ struct RootView: View {
                     Text("StoreControl")
                         .font(.largeTitle.weight(.bold))
                     HStack {
-                        Text("Version v\(appVersion ?? "AppVersion")")
+                        Text("Version \(appVersion ?? "AppVersion")")
                         Capsule(style: .continuous)
                             .frame(width: getWidth(text: buildNumber), height: 30)
                             .clipped()
