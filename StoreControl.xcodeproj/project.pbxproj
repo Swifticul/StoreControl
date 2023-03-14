@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F01C987929B35CA8001D6E06 /* DemoUpdateSetup in Sources */ = {isa = PBXBuildFile; fileRef = F01C987829B35CA8001D6E06 /* DemoUpdateSetup */; };
+		F01C987929B35CA8001D6E06 /* DemoUpdateSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = F01C987829B35CA8001D6E06 /* DemoUpdateSetup.swift */; };
 		F01C988429B37049001D6E06 /* Profiles in Resources */ = {isa = PBXBuildFile; fileRef = F01C988329B37049001D6E06 /* Profiles */; };
 		F04D5B8D29B387D100CAF926 /* ThemeSelectorUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04D5B8C29B387D100CAF926 /* ThemeSelectorUI.swift */; };
 		F04D5B8F29B3883C00CAF926 /* Themes in Resources */ = {isa = PBXBuildFile; fileRef = F04D5B8E29B3883C00CAF926 /* Themes */; };
@@ -27,7 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		F01C987829B35CA8001D6E06 /* DemoUpdateSetup */ = {isa = PBXFileReference; lastKnownFileType = text; path = DemoUpdateSetup; sourceTree = "<group>"; };
+		F01C987829B35CA8001D6E06 /* DemoUpdateSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoUpdateSetup.swift; sourceTree = "<group>"; };
 		F01C988329B37049001D6E06 /* Profiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Profiles; sourceTree = "<group>"; };
 		F01C988629B37C74001D6E06 /* provisioning.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = provisioning.md; sourceTree = "<group>"; };
 		F04D5B8C29B387D100CAF926 /* ThemeSelectorUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSelectorUI.swift; sourceTree = "<group>"; };
@@ -151,7 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				F0BC034629AA00AC004D3DE8 /* RootView.swift */,
-				F01C987829B35CA8001D6E06 /* DemoUpdateSetup */,
+				F01C987829B35CA8001D6E06 /* DemoUpdateSetup.swift */,
 				F04D5B8C29B387D100CAF926 /* ThemeSelectorUI.swift */,
 				F05FDD5929AB961E00FDD6DA /* DemoLoopSurgeryAdd.swift */,
 				F09E3E3329B4B83C003AB870 /* ExperimentsInterface.swift */,
@@ -248,7 +248,7 @@
 				F05FDD4E29AB5B2600FDD6DA /* vm_unaligned_copy_switch_race.c in Sources */,
 				F04D5B8D29B387D100CAF926 /* ThemeSelectorUI.swift in Sources */,
 				F0BC034529AA00AC004D3DE8 /* Root.swift in Sources */,
-				F01C987929B35CA8001D6E06 /* DemoUpdateSetup in Sources */,
+				F01C987929B35CA8001D6E06 /* DemoUpdateSetup.swift in Sources */,
 				F05FDD5C29ABC13300FDD6DA /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
